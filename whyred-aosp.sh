@@ -25,8 +25,8 @@ export ARCH=arm64
 export SUBARCH=arm64
 export PATH=/usr/lib/ccache:$PATH
 export CROSS_COMPILE
-export KBUILD_BUILD_USER="FiqriArdyansyah"
-export KBUILD_BUILD_HOST="STRIX-development"
+export KBUILD_BUILD_USER="SkylarkAurora"
+export KBUILD_BUILD_HOST="SkylarkX-Project-Whyred"
 
 # Banner
 echo -e "  ___  ___  _ __ (_) ___"
@@ -57,7 +57,7 @@ echo -ne "\n(i) Please enter a choice[1-5]: "
 	
 	if [ "$choice" == "1" ]; then
 		echo -e "\n(i) Cloning AnyKernel3 if folder not exist..."
-		git clone https://github.com/fiqri19102002/AnyKernel3 -b whyred-aosp --depth=1 AnyKernel3
+		git clone https://github.com/SkylarkX-Project-Whyred/AnyKernel3 -b whyred-aosp --depth=1 AnyKernel3
 	
 		echo -e "\n(i) Cloning toolchain if folder not exist..."
 		git clone https://github.com/djb77/aarch64-linux-android-4.9 -b master --depth=1 toolchain
