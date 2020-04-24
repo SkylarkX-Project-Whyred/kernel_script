@@ -60,7 +60,7 @@ echo -ne "\n(i) Please enter a choice[1-5]: "
 	
 	if [ "$choice" == "1" ]; then
 		echo -e "\n(i) Cloning AnyKernel3 if folder not exist..."
-		git clone https://github.com/fiqri19102002/AnyKernel3 -b whyred-aosp --depth=1 AnyKernel3
+		git clone https://github.com/SkylarkX-Project-Whyred/AnyKernel3 -b whyred-aosp --depth=1 AnyKernel3
 	
 		echo -e "\n(i) Cloning clang if folder not exist..."
 		git clone https://github.com/STRIX-Project/STRIX-clang -b clang-11.0.0 --depth=1 clang-11.0
