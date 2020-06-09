@@ -44,7 +44,7 @@ echo -e "|_|\_\|_____||_| \_\|_| \_||_____||_____|  "
 while true; do
 echo -e "\n############################################################################"
 echo -e " "
-echo -e "[1] Build Whyred AOSP Kernel"
+echo -e "[1] Build RMX191 AOSP Kernel"
 echo -e "[2] Regenerate defconfig"
 echo -e "[3] Source cleanup"
 echo -e "[4] Create flashable zip"
