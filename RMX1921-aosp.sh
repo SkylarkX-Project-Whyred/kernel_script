@@ -25,6 +25,7 @@ export ARCH=arm64
 export SUBARCH=arm64
 export PATH=/usr/lib/ccache:$PATH
 export CROSS_COMPILE
+export CROSS_COMPILE_ARM32
 export KBUILD_BUILD_USER="SkylarkAurora"
 export KBUILD_BUILD_HOST="SkylarkX-Project-Whyred"
 
