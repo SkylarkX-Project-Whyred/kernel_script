@@ -25,7 +25,8 @@ export ARCH=arm64
 export SUBARCH=arm64
 export PATH=/usr/lib/ccache:$PATH
 export CROSS_COMPILE
-export CC=$PWD/clang-11.0/bin/clang-11
+export CROSS_COMPILE_ARM32
+export CC=$PWD/clang-11.1/bin/clang-11
 export KBUILD_COMPILER_STRING=$($CC --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
 export CLANG_TREPLE=aarch64-linux-gnu-
 export KBUILD_BUILD_USER="SkylarkAurora"
@@ -63,7 +64,7 @@ echo -ne "\n(i) Please enter a choice[1-5]: "
 		git clone https://github.com/SkylarkX-Project-Whyred/AnyKernel3 -b whyred-aosp --depth=1 AnyKernel3
 	
 		echo -e "\n(i) Cloning clang if folder not exist..."
-		git clone https://github.com/STRIX-Project/STRIX-clang -b clang-11.0.0 --depth=1 clang-11.0
+		https://github.com/kaderbava/clang-llvm -b ten --depth=1 clang-11.1
 		
 		echo -e "\n(i) Cloning toolchain if folder not exist..."
 		git clone https://github.com/najahiiii/aarch64-linux-gnu.git -b linaro8-20190402 --depth=1 toolchain
