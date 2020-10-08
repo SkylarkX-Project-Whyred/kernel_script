@@ -3,7 +3,7 @@
 # Copyright (C) 2018 Rama Bondan Prakoso (rama982)
 # Copyright (C) 2020 Fiqri Ardyansyah (fiqri19102002)
 # Copyright (C) 2020 Agung Pratama (skylarkAurora)
-# For Xiaomi Redmi Note 5 / Pro (sdm636/sdm660)
+# For Redmi Note 9 Pro (sdm720G)
 
 # Color
 green='\033[0;32m'
@@ -14,7 +14,7 @@ KERNEL_DIR=$PWD
 KERN_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb
 ZIP_DIR=$KERNEL_DIR/AnyKernel3
 CONFIG_DIR=$KERNEL_DIR/arch/arm64/configs
-CONFIG=whyred_defconfig
+CONFIG=joyeuse_defconfig
 CORES=$(grep -c ^processor /proc/cpuinfo)
 THREAD="-j$CORES"
 CROSS_COMPILE+="ccache "
@@ -25,11 +25,11 @@ export ARCH=arm64
 export SUBARCH=arm64
 export PATH=/usr/lib/ccache:$PATH
 export CROSS_COMPILE
-export CC=$PWD/clang-11.0/bin/clang-11
+export CC=$PWD/proton/bin/proton
 export KBUILD_COMPILER_STRING=$($CC --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
 export CLANG_TREPLE=aarch64-linux-gnu-
-export KBUILD_BUILD_USER="SkylarkAurora"
-export KBUILD_BUILD_HOST="SkylarkX-Project-Whyred"
+export KBUILD_BUILD_USER="AgungPratamma"
+export KBUILD_BUILD_HOST="Manjaro-Linux-Dev"
 
 # Banner
 echo -e "  ___  ___  _ __ (_) ___"
@@ -47,7 +47,7 @@ echo -e "|_|\_\|_____||_| \_\|_| \_||_____||_____|  "
 while true; do
 echo -e "\n############################################################################"
 echo -e " "
-echo -e "[1] Build Whyred AOSP Kernel"
+echo -e "[1] Build Joyeuse AOSP Kernel"
 echo -e "[2] Regenerate defconfig"
 echo -e "[3] Source cleanup"
 echo -e "[4] Create flashable zip"
@@ -63,7 +63,7 @@ echo -ne "\n(i) Please enter a choice[1-5]: "
 		git clone https://github.com/SkylarkX-Project-Whyred/AnyKernel3 -b whyred-aosp --depth=1 AnyKernel3
 	
 		echo -e "\n(i) Cloning clang if folder not exist..."
-		git clone https://github.com/STRIX-Project/STRIX-clang -b clang-11.0.0 --depth=1 clang-11.0
+		https://github.com/kdrag0n/proton-clang.git -b master --depth=1 proton
 		
 		echo -e "\n(i) Cloning toolchain if folder not exist..."
 		git clone https://github.com/najahiiii/aarch64-linux-gnu.git -b linaro8-20190402 --depth=1 toolchain
